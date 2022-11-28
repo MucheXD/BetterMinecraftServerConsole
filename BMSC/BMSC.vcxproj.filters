@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>qml;cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>qrc;rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Form Files">
+      <UniqueIdentifier>{99349809-55BA-4b9d-BF79-8FDBB0286EB3}</UniqueIdentifier>
+      <Extensions>ui</Extensions>
+    </Filter>
+    <Filter Include="Translation Files">
+      <UniqueIdentifier>{639EADAA-A684-42e4-A9AD-28FC9BCB8F7C}</UniqueIdentifier>
+      <Extensions>ts</Extensions>
+    </Filter>
+    <Filter Include="documents">
+      <UniqueIdentifier>{324c9e00-b9cd-474f-9491-52c6127e664e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\widgets">
+      <UniqueIdentifier>{b1ac7693-eab3-4cb2-8251-bbd1763b942b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Form Files\widgets">
+      <UniqueIdentifier>{1564bec0-4ceb-4bed-a755-0b5cf9f0e7f3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\widgets">
+      <UniqueIdentifier>{1feaba63-403d-4cbd-8a91-c4584a509070}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <QtRcc Include="BMSC.qrc">
+      <Filter>Resource Files</Filter>
+    </QtRcc>
+    <QtUic Include="rootWindow.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtMoc Include="rootWindow.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <ClCompile Include="rootWindow.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <None Include="BMSC.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <ResourceCompile Include="BMSC.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="widgets\w_console.cpp">
+      <Filter>Source Files\widgets</Filter>
+    </ClCompile>
+    <ClCompile Include="serverCore.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="styleGuide.txt">
+      <Filter>documents</Filter>
+    </Text>
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="widgets\w_console.h">
+      <Filter>Header Files\widgets</Filter>
+    </QtMoc>
+  </ItemGroup>
+  <ItemGroup>
+    <QtUic Include="widgets\w_console.ui">
+      <Filter>Form Files\widgets</Filter>
+    </QtUic>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="serverCore.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

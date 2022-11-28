@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>rootWindowClass</class>
+ <widget class="QWidget" name="rootWindowClass">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1024</width>
+    <height>576</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>rootWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QWidget
+{
+	font: 10pt &quot;Microsoft YaHei UI&quot;;
+	background-color: #f5f8fa;
+}
+/*QLineEdit*/
+QLineEdit
+{
+	background-color: #fafafa;
+	padding: 2px 2px 2px 4px;
+	border-width: 2px;
+	border-color: #dcdcdc;
+	border-style: solid;
+	border-radius: 4px;
+}
+QLineEdit:focus
+{
+	border-color: #0064c8;
+}
+/*QPushButton*/
+QPushButton 
+{
+	color: #ffffff;
+	background-color: #0064c8;
+	padding: 3px 8px 2px 8px;
+	border-width: 2px;
+	border-color: #146ec8;
+	border-style: solid;
+	border-radius: 4px;
+}
+QPushButton:disabled 
+{
+	background-color: #c8c8c8;
+	border-color: #c8c8c8;
+}
+QPushButton:hover
+{
+	background-color: #146ec8;
+	border-color: #2778c8;
+}
+QPushButton:pressed 
+{
+	background-color: #2778c8;
+	border-color: #2778c8;
+}
+/*QScrollBar*/
+QScrollBar:vertical
+{
+    background: #fafafa;
+    padding: 8px 4px 8px 4px;
+}
+QScrollBar::handle:vertical
+{
+    background: #dcdcdc;
+    border-radius: 4px; 
+}
+QScrollBar::handle:vertical:hover
+{
+    background: #c8c8c8; 
+}
+QScrollBar::add-line:vertical
+{
+	height:12px;
+	width:12px;
+    border-image:url(:/icons/drop-arrow-down);
+    subcontrol-position:bottom;
+}
+QScrollBar::sub-line:vertical
+{
+    height:12px;
+	width:12px;
+    image:url(:/icons/drop-arrow-up);
+    subcontrol-position:top;
+}</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout" rowstretch="1,10,10" columnstretch="3,2">
+   <property name="leftMargin">
+    <number>0</number>
+   </property>
+   <property name="topMargin">
+    <number>0</number>
+   </property>
+   <property name="rightMargin">
+    <number>0</number>
+   </property>
+   <property name="bottomMargin">
+    <number>0</number>
+   </property>
+   <property name="spacing">
+    <number>1</number>
+   </property>
+   <item row="1" column="1" rowspan="2">
+    <widget class="QWidget" name="widget_console" native="true">
+     <property name="styleSheet">
+      <string notr="true"/>
+     </property>
+     <layout class="QHBoxLayout" name="horizontalLayout">
+      <property name="spacing">
+       <number>0</number>
+      </property>
+      <property name="leftMargin">
+       <number>0</number>
+      </property>
+      <property name="topMargin">
+       <number>0</number>
+      </property>
+      <property name="rightMargin">
+       <number>0</number>
+      </property>
+      <property name="bottomMargin">
+       <number>0</number>
+      </property>
+     </layout>
+    </widget>
+   </item>
+   <item row="0" column="0" colspan="2">
+    <widget class="QWidget" name="widget_topBar" native="true">
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(85, 255, 255);</string>
+     </property>
+     <widget class="QLabel" name="label_debug">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>500</width>
+        <height>30</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>TextLabel</string>
+      </property>
+     </widget>
+    </widget>
+   </item>
+   <item row="2" column="0">
+    <widget class="QWidget" name="widget_funcPanel" native="true">
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(75, 225, 225);</string>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="0">
+    <layout class="QHBoxLayout" name="horizontalLayout_2_1" stretch="3,2">
+     <property name="spacing">
+      <number>1</number>
+     </property>
+     <item>
+      <widget class="QWidget" name="widget_performance" native="true">
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(68, 205, 205);</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QWidget" name="widget_players" native="true">
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(72, 215, 215);</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources>
+  <include location="BMSC.qrc"/>
+ </resources>
+ <connections/>
+</ui>
