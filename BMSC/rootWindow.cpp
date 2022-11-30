@@ -9,19 +9,19 @@ rootWindow::rootWindow(QWidget *parent)
     ui_root.widget_console->layout()->addWidget(widget_console);
 
     connect(ui_root.btn_serverSSControl, &QPushButton::clicked, this, &rootWindow::callLaunchServer);
-    //example->setReadChannel(QProcess::StandardOutput);
-    /*connect(serverCoreProcess, &QProcess::readyReadStandardOutput, this, &rootWindow::stdOutput);
-    connect(serverCoreProcess, &QProcess::readyReadStandardError, this, &rootWindow::errOutPut);
-    connect(ui_root.btn_commandSend, &QPushButton::clicked, this, &QProcessTest::strInput);
-    example->start("cmd");
-    example->waitForStarted();*/
 
 }
 
 void rootWindow::callLaunchServer(void)
 {
     serverCore* core = new serverCore;
-    core->startServerCore("");
+    bool isSuccessed = core->startServerCore("./Testing/SimulationConsole.exe");
+    connect(core, &serverCore::coreStdOutput, this, &rootWindow::outputTest);
+}
+
+void rootWindow::outputTest(QString msg)
+{
+    qDebug() << msg;
 }
 
 rootWindow::~rootWindow()

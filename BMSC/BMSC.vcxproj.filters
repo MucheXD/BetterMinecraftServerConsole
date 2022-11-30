@@ -74,15 +74,13 @@
     <QtMoc Include="widgets\w_console.h">
       <Filter>Header Files\widgets</Filter>
     </QtMoc>
+    <QtMoc Include="serverCore.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
   </ItemGroup>
   <ItemGroup>
     <QtUic Include="widgets\w_console.ui">
       <Filter>Form Files\widgets</Filter>
     </QtUic>
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="serverCore.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
   </ItemGroup>
 </Project>
