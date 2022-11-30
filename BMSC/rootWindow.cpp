@@ -8,8 +8,7 @@ rootWindow::rootWindow(QWidget *parent)
     widget_console->show();
     ui_root.widget_console->layout()->addWidget(widget_console);
 
-    serverCore* core = new serverCore;
-    core->startServerCore("");
+    connect(ui_root.btn_serverSSControl, &QPushButton::clicked, this, &rootWindow::callLaunchServer);
     //example->setReadChannel(QProcess::StandardOutput);
     /*connect(serverCoreProcess, &QProcess::readyReadStandardOutput, this, &rootWindow::stdOutput);
     connect(serverCoreProcess, &QProcess::readyReadStandardError, this, &rootWindow::errOutPut);
@@ -19,6 +18,11 @@ rootWindow::rootWindow(QWidget *parent)
 
 }
 
+void rootWindow::callLaunchServer(void)
+{
+    serverCore* core = new serverCore;
+    core->startServerCore("");
+}
 
 rootWindow::~rootWindow()
 {}

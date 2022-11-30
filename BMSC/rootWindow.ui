@@ -13,83 +13,7 @@
   <property name="windowTitle">
    <string>rootWindow</string>
   </property>
-  <property name="styleSheet">
-   <string notr="true">QWidget
-{
-	font: 10pt &quot;Microsoft YaHei UI&quot;;
-	background-color: #f5f8fa;
-}
-/*QLineEdit*/
-QLineEdit
-{
-	background-color: #fafafa;
-	padding: 2px 2px 2px 4px;
-	border-width: 2px;
-	border-color: #dcdcdc;
-	border-style: solid;
-	border-radius: 4px;
-}
-QLineEdit:focus
-{
-	border-color: #0064c8;
-}
-/*QPushButton*/
-QPushButton 
-{
-	color: #ffffff;
-	background-color: #0064c8;
-	padding: 3px 8px 2px 8px;
-	border-width: 2px;
-	border-color: #146ec8;
-	border-style: solid;
-	border-radius: 4px;
-}
-QPushButton:disabled 
-{
-	background-color: #c8c8c8;
-	border-color: #c8c8c8;
-}
-QPushButton:hover
-{
-	background-color: #146ec8;
-	border-color: #2778c8;
-}
-QPushButton:pressed 
-{
-	background-color: #2778c8;
-	border-color: #2778c8;
-}
-/*QScrollBar*/
-QScrollBar:vertical
-{
-    background: #fafafa;
-    padding: 8px 4px 8px 4px;
-}
-QScrollBar::handle:vertical
-{
-    background: #dcdcdc;
-    border-radius: 4px; 
-}
-QScrollBar::handle:vertical:hover
-{
-    background: #c8c8c8; 
-}
-QScrollBar::add-line:vertical
-{
-	height:12px;
-	width:12px;
-    border-image:url(:/icons/drop-arrow-down);
-    subcontrol-position:bottom;
-}
-QScrollBar::sub-line:vertical
-{
-    height:12px;
-	width:12px;
-    image:url(:/icons/drop-arrow-up);
-    subcontrol-position:top;
-}</string>
-  </property>
-  <layout class="QGridLayout" name="gridLayout" rowstretch="1,10,10" columnstretch="3,2">
+  <layout class="QGridLayout" name="gridLayout" rowstretch="1,20,20" columnstretch="3,2">
    <property name="leftMargin">
     <number>0</number>
    </property>
@@ -132,21 +56,108 @@ QScrollBar::sub-line:vertical
    <item row="0" column="0" colspan="2">
     <widget class="QWidget" name="widget_topBar" native="true">
      <property name="styleSheet">
-      <string notr="true">background-color: rgb(85, 255, 255);</string>
+      <string notr="true">QWidget
+{
+	font: 10pt &quot;Microsoft YaHei UI&quot;;
+	background-color: #004b96;
+}
+/*QPushButton*/
+QPushButton 
+{
+	color: #ffffff;
+	background-color: #0064c8;
+	padding: 5px 5px 5px 5px;
+	border-style: none;
+}
+QPushButton:disabled 
+{
+	background-color: #c8c8c8;
+}
+QPushButton:hover
+{
+	background-color: #146ec8;
+}
+QPushButton:pressed 
+{
+	background-color: #2778c8;
+}</string>
      </property>
-     <widget class="QLabel" name="label_debug">
-      <property name="geometry">
-       <rect>
-        <x>0</x>
-        <y>0</y>
-        <width>500</width>
-        <height>30</height>
-       </rect>
+     <layout class="QHBoxLayout" name="horizontalLayout_2" stretch="1,5,1">
+      <property name="spacing">
+       <number>2</number>
       </property>
-      <property name="text">
-       <string>TextLabel</string>
+      <property name="leftMargin">
+       <number>0</number>
       </property>
-     </widget>
+      <property name="topMargin">
+       <number>0</number>
+      </property>
+      <property name="rightMargin">
+       <number>0</number>
+      </property>
+      <property name="bottomMargin">
+       <number>0</number>
+      </property>
+      <item>
+       <widget class="QLabel" name="label_serverStatus">
+        <property name="styleSheet">
+         <string notr="true">QLabel
+{
+	color: #ffffff;
+	background-color: #0064c8;
+}
+QLabel[status=&quot;stopped&quot;]
+{
+	background-color: #c8c8c8;
+}
+QLabel[status=&quot;running&quot;]
+{
+	background-color: #00c81b;
+}
+QLabel[status=&quot;starting&quot;]
+{
+	background-color: #c8b700;
+}
+QLabel[status=&quot;stopping&quot;]
+{
+	background-color: #c8b700;
+}
+QLabel[status=&quot;alert&quot;]
+{
+	background-color: #c86400;
+}
+QLabel[status=&quot;failed&quot;]
+{
+	background-color: #c80000;
+}
+</string>
+        </property>
+        <property name="text">
+         <string>服务器状态</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+        <property name="status" stdset="0">
+         <string/>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="btn_serverOptions">
+        <property name="text">
+         <string>Minecraft Server Console</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="btn_serverSSControl">
+        <property name="text">
+         <string>启动服务器</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
     </widget>
    </item>
    <item row="2" column="0">

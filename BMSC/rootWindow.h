@@ -15,4 +15,5 @@ public:
 
 private:
     Ui::rootWindowClass ui_root;
+    void callLaunchServer(void);
 };
