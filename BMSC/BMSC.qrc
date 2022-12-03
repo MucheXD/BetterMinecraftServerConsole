@@ -1,4 +1,5 @@
 <RCC>
-    <qresource prefix="rootWindow">
-    </qresource>
+  <qresource prefix="typeIcons">
+    <file>res/type_ServerMain.svg</file>
+  </qresource>
 </RCC>

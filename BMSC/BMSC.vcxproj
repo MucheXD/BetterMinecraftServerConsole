@@ -86,8 +86,10 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="serverCore.cpp" />
+    <ClCompile Include="widgets\item_log.cpp" />
     <ClCompile Include="widgets\w_console.cpp" />
     <QtRcc Include="BMSC.qrc" />
+    <QtUic Include="item_log.ui" />
     <QtUic Include="rootWindow.ui" />
     <QtMoc Include="rootWindow.h" />
     <ClCompile Include="rootWindow.cpp" />
@@ -104,6 +106,12 @@
   </ItemGroup>
   <ItemGroup>
     <QtMoc Include="serverCore.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="widgets\item_log.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="global.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Condition="Exists('$(QtMsBuild)\qt.targets')">

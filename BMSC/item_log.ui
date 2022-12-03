@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>item_logClass</class>
+ <widget class="QWidget" name="item_logClass">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>400</width>
+    <height>25</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>item_log</string>
+  </property>
+  <layout class="QHBoxLayout" name="horizontalLayout">
+   <property name="spacing">
+    <number>0</number>
+   </property>
+   <property name="leftMargin">
+    <number>0</number>
+   </property>
+   <property name="topMargin">
+    <number>0</number>
+   </property>
+   <property name="rightMargin">
+    <number>0</number>
+   </property>
+   <property name="bottomMargin">
+    <number>0</number>
+   </property>
+   <item>
+    <widget class="QWidget" name="widget_root" native="true">
+     <property name="styleSheet">
+      <string notr="true">QWidget[type=&quot;info&quot;]
+{
+	background-color: #0064c8;
+}
+QWidget[type=&quot;warning&quot;]
+{
+	background-color: #c8b700;
+}
+QWidget[type=&quot;error&quot;]
+{
+	background-color: #c80000;
+}</string>
+     </property>
+     <property name="type" stdset="0">
+      <string>error</string>
+     </property>
+     <layout class="QHBoxLayout" name="horizontalLayout_2" stretch="0,20">
+      <property name="spacing">
+       <number>0</number>
+      </property>
+      <property name="leftMargin">
+       <number>5</number>
+      </property>
+      <property name="topMargin">
+       <number>1</number>
+      </property>
+      <property name="rightMargin">
+       <number>1</number>
+      </property>
+      <property name="bottomMargin">
+       <number>1</number>
+      </property>
+      <item>
+       <widget class="QLabel" name="icon">
+        <property name="styleSheet">
+         <string notr="true">background-color: #fafafa;
+padding: 4px;
+border-color: #fafafa;
+border-right-color: #dcdcdc;
+border-width: 1px;
+border-style: solid;</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="pixmap">
+         <pixmap resource="BMSC.qrc">:/typeIcons/res/type_ServerMain.svg</pixmap>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="text">
+        <property name="styleSheet">
+         <string notr="true">background-color: #fafafa;
+padding: 0px 0px 0px 4px</string>
+        </property>
+        <property name="text">
+         <string>Text</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources>
+  <include location="BMSC.qrc"/>
+ </resources>
+ <connections/>
+</ui>

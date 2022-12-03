@@ -16,7 +16,8 @@ public:
     ~rootWindow();
 
 private:
-    Ui::rootWindowClass ui_root;
     void callLaunchServer(void);
-    void outputTest(QString msg);
+    void setServerStatusLabel(char id);
+    Ui::rootWindowClass ui_root;
+    void* p_subwidget_console;
 };

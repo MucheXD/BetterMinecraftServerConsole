@@ -1,7 +1,12 @@
 #pragma once
 
 #include <QWidget>
+#include <QDateTime>
+#include <QRegularExpression>
 #include "ui_w_console.h"
+#include "../serverCore.h"
+#include "../global.h"
+#include "item_log.h"
 
 class w_console : public QWidget
 {
@@ -9,8 +14,11 @@ class w_console : public QWidget
 
 public:
 	w_console(QWidget *parent = nullptr);
+	void initWidget(serverCore* p_serverCore);
 	~w_console();
 
 private:
-	Ui::w_consoleClass ui;
+	void outputTest(QString msg);
+	void processLog(QString rawText);
+	Ui::w_consoleClass ui_wconsole;
 };
