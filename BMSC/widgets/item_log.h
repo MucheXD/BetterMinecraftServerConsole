@@ -1,7 +1,9 @@
 #pragma once
 
-#include <QWidget>
+#include <QtWidgets/QWidget>
+#include <QFontMetrics>
 #include "ui_item_log.h"
+#include "../global.h"
 
 class item_log : public QWidget
 {
@@ -9,8 +11,9 @@ class item_log : public QWidget
 
 public:
 	item_log(QWidget *parent = nullptr);
+	void setContent(LOGCONTENT content);
 	~item_log();
-	Ui::item_logClass ui;
-private:
 	
+private:
+	Ui::item_logClass ui_logitem;
 };

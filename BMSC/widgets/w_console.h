@@ -18,7 +18,8 @@ public:
 	~w_console();
 
 private:
-	void outputTest(QString msg);
+	void printToLogTable(LOGCONTENT logContent);
 	void processLog(QString rawText);
+	LOGCONTENT analyzeLog(QString rawText);
 	Ui::w_consoleClass ui_wconsole;
 };
